@@ -52,7 +52,7 @@ export default {
           class="additional_information flex text-white justify-center items-center mt-5"
         >
           <div
-            class="additional_information__item mr-0 flex border-transparent hover:border-current transition border-2 px-4 py-2 rounded-3xl"
+            class="additional_information__item mr-2 flex border-transparent hover:border-current transition border-2 px-4 py-2 rounded-3xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ export default {
             Request
           </div>
           <div
-            class="additional_information__item flex border-transparent hover:border-current transition border-2 px-4 py-2 rounded-3xl"
+            class="additional_information__item mr-2 flex border-transparent hover:border-current transition border-2 px-4 py-2 rounded-3xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ export default {
             Trip start:18 feb - 11:00
           </div>
           <div
-            class="additional_information__item flex border-transparent hover:border-current transition border-2 px-4 py-2 rounded-3xl"
+            class="additional_information__item mr-2 flex border-transparent hover:border-current transition border-2 px-4 py-2 rounded-3xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ export default {
             45 people
           </div>
           <div
-            class="additional_information__item flex border-transparent hover:border-current transition border-2 px-4 py-2 rounded-3xl"
+            class="additional_information__item mr-2 flex border-transparent hover:border-current transition border-2 px-4 py-2 rounded-3xl"
           >
             Paid 12$
             <svg
