@@ -1,15 +1,7 @@
 <script setup>
-import HeroSection from "../sections/MainSection.vue";
+import MainSection from "../sections/MainSection.vue";
 </script>
 
 <template>
-    <HeroSection />
-<!-- 
-    <FeatureSection />
-
-    <DownloadSection />
-
-    <FaqSection />
-
-    <SubscribeSection /> -->
+  <MainSection />
 </template>
