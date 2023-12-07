@@ -491,6 +491,7 @@ export default {
   padding: 68px 0 94px 0;
 }
 .btn-slide {
+  margin-left: 60px;
   width: 150px;
 }
 .slider {
@@ -547,4 +548,7 @@ export default {
 .border_line {
   border: 2px solid rgb(196, 196, 196);
 }
+/* { */
+  /* margin-left: 60px; */
+/* } */
 </style>
