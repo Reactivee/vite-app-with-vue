@@ -398,76 +398,82 @@ export default {
                 </template>
               </swiper>
             </div>
-            <div class="flex mt-8 flex-row mb-10">
-              <div class="basis-1/2">
-                <div class="locate_items flex mb-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    width='30'
-                    viewBox="0 0 24 24"
-                    stroke-width="2.5"
-                    stroke="black"
-                    class=" mr-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                    />
-                  </svg>
-                  <p
-                    class="font-bold line-clamp-1 hover:line-clamp-none hover:cursor-pointer"
-                  >
-                    Riga international airport
-                    <span class="text-gray-400"
-                      >P133, Gogola iela Lv-1050</span
+            <div class="flex mt-8 flex-row mb-10 align-center">
+              <div class="basis-1/2 align-center">
+                <template v-for="(item, index) in timetable" :key="index">
+                  <div class="locate_items flex relative align-center mb-5">
+                    <div class="locate_items__icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        width="30"
+                        viewBox="0 0 24 24"
+                        stroke-width="2.5"
+                        stroke="black"
+                        class="mr-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                        />
+                      </svg>
+                    </div>
+                    <p
+                      class="font-bold line-clamp-1 hover:line-clamp-none hover:cursor-pointer"
                     >
-                  </p>
-                </div>
+                      {{ item.location }}
+                      <span class="text-gray-400">{{ item.address }}</span>
+                    </p>
+                  </div>
+                </template>
               </div>
               <div class="basis-1/4">
-                <div class="clock_item flex justify-center mb-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2.5"
-                    stroke="black"
-                    class="w-6 h-6 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span class="font-bold">Arrive: 17:20</span>
-                </div>
+                <template v-for="(item, index) in timetable" :key="index">
+                  <div class="clock_item flex justify-center align-center mb-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2.5"
+                      stroke="black"
+                      class="w-6 h-6 mr-2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span class="font-bold">Arrive: {{ item.arrive }}</span>
+                  </div>
+                </template>
               </div>
               <div class="basis-1/4">
-                <div class="clock_item flex justify-center mb-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2.5"
-                    stroke="black"
-                    class="w-6 h-6 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span class="font-bold">Depart: 17:20</span>
-                </div>
+                <template v-for="(item, index) in timetable" :key="index">
+                  <div class="clock_item flex justify-center align-center mb-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2.5"
+                      stroke="black"
+                      class="w-6 h-6 mr-2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span class="font-bold">Depart: {{ item.departure }}</span>
+                  </div>
+                </template>
               </div>
             </div>
 
@@ -550,6 +556,22 @@ export default {
   font-weight: 700;
   align-items: center;
   justify-content: center;
+}
+.locate_items__icon {
+  overflow: hidden;
+}
+.locate_items__icon::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  left: 13px;
+  top: 26px;
+  background: black;
+  z-index: -1;
+}
+.locate_items:last-child .locate_items__icon::after {
+  display: none;
 }
 .border_line {
   border: 2px solid rgb(196, 196, 196);
