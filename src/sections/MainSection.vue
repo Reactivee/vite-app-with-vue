@@ -425,7 +425,8 @@ export default {
                   >
                     Riga international airport
                     <span class="text-gray-400"
-                      >P133, Marupa, Lv-1050 P133,</span
+                      >P133, Marupa, Lv-1050asdasdas P133, Marupa,
+                      Lv-1050</span
                     >
                   </p>
                 </div>
