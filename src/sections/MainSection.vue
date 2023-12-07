@@ -27,11 +27,11 @@ export default {
       { date: "6 November" },
       // Add more images as needed with their URLs
     ];
-   
+
     return {
       swiper,
       dates,
-      modules: [Navigation, Pagination],
+      modules: [Navigation],
     };
   },
 };
@@ -156,7 +156,7 @@ export default {
       >
         <div class="grid grid-cols-3 py-20 gap-4">
           <!-- Left table -->
-          <div class="user_profile grid">
+          <div class="user_profile grid ">
             <div class="user_img border-r-2">
               <div class="status text-sky-500 font-bold text-sm">Active</div>
               <div class="text-black font-bold text-2xl mb-3">Chauffeur</div>
@@ -511,6 +511,9 @@ export default {
   width: 80%;
   margin: 0 auto;
 }
+.user_profile{
+  align-items: center;
+}
 .swiper-wrapper {
   padding: 10px 0;
 }
@@ -549,6 +552,6 @@ export default {
   border: 2px solid rgb(196, 196, 196);
 }
 /* { */
-  /* margin-left: 60px; */
+/* margin-left: 60px; */
 /* } */
 </style>
