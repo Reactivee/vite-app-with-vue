@@ -404,10 +404,11 @@ export default {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
-                    viewBox="0 0 21 21"
+                    width='30'
+                    viewBox="0 0 24 24"
                     stroke-width="2.5"
                     stroke="black"
-                    class="w-10 mr-4"
+                    class=" mr-4"
                   >
                     <path
                       stroke-linecap="round"
@@ -425,8 +426,7 @@ export default {
                   >
                     Riga international airport
                     <span class="text-gray-400"
-                      >P133, Marupa, Lv-1050asdasdas P133, Marupa,
-                      Lv-1050</span
+                      >P133, Gogola iela Lv-1050</span
                     >
                   </p>
                 </div>
