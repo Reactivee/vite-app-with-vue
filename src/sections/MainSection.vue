@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { useSwiper } from "swiper/vue";
 import { ref, computed } from "vue";
 import { Navigation, Pagination } from "swiper/modules";
+import timetable from "../data/timetable.js";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -31,6 +33,7 @@ export default {
     return {
       swiper,
       dates,
+      timetable,
       modules: [Navigation],
     };
   },
@@ -156,7 +159,7 @@ export default {
       >
         <div class="grid grid-cols-3 py-20 gap-4">
           <!-- Left table -->
-          <div class="user_profile grid ">
+          <div class="user_profile grid">
             <div class="user_img border-r-2">
               <div class="status text-sky-500 font-bold text-sm">Active</div>
               <div class="text-black font-bold text-2xl mb-3">Chauffeur</div>
@@ -422,61 +425,13 @@ export default {
                   >
                     Riga international airport
                     <span class="text-gray-400"
-                      >P133, Marupa, Lv-1050asdasdas P133, Marupa,
-                      Lv-1050asdasdas</span
-                    >
-                  </p>
-                </div>
-                 <div class="locate_items flex mb-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 21 21"
-                    stroke-width="2.5"
-                    stroke="black"
-                    class="w-10 mr-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                    />
-                  </svg>
-                  <p
-                    class="font-bold line-clamp-1 hover:line-clamp-none hover:cursor-pointer"
-                  >
-                    Riga international airport
-                    <span class="text-gray-400"
-                      >P133, Marupa, Lv-1050asdasdas P133, Marupa,
-                      Lv-1050asdasdas</span
+                      >P133, Marupa, Lv-1050 P133,</span
                     >
                   </p>
                 </div>
               </div>
               <div class="basis-1/4">
                 <div class="clock_item flex justify-center mb-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2.5"
-                    stroke="black"
-                    class="w-6 h-6 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span class="font-bold">Arrive: 17:20</span>
-                </div>
-                 <div class="mb-5 clock_item flex justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -512,25 +467,7 @@ export default {
                   </svg>
                   <span class="font-bold">Depart: 17:20</span>
                 </div>
-                <div class="clock_item flex justify-center mb-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2.5"
-                    stroke="black"
-                    class="w-6 h-6 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span class="font-bold">Depart: 17:20</span>
-                </div>
               </div>
-              
             </div>
 
             <!-- Map -->
@@ -576,7 +513,7 @@ export default {
   width: 80%;
   margin: 0 auto;
 }
-.user_profile{
+.user_profile {
   align-items: flex-start;
 }
 .swiper-wrapper {
