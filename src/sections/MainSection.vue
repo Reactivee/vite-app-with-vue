@@ -211,7 +211,7 @@ export default {
                 </svg>
               </div>
             </div>
-            <div class="col-span-2 mt-10">
+            <div class="col-span-2">
               <div class="list_process flex items-center">
                 <svg
                   width="32px"
@@ -397,7 +397,37 @@ export default {
             </div>
             <div class="flex mt-8 flex-row mb-10">
               <div class="basis-1/2">
-                <div class="locate_items flex">
+                <div class="locate_items flex mb-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 21 21"
+                    stroke-width="2.5"
+                    stroke="black"
+                    class="w-10 mr-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                  <p
+                    class="font-bold line-clamp-1 hover:line-clamp-none hover:cursor-pointer"
+                  >
+                    Riga international airport
+                    <span class="text-gray-400"
+                      >P133, Marupa, Lv-1050asdasdas P133, Marupa,
+                      Lv-1050asdasdas</span
+                    >
+                  </p>
+                </div>
+                 <div class="locate_items flex mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -429,7 +459,24 @@ export default {
                 </div>
               </div>
               <div class="basis-1/4">
-                <div class="clock_item flex justify-center">
+                <div class="clock_item flex justify-center mb-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="black"
+                    class="w-6 h-6 mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span class="font-bold">Arrive: 17:20</span>
+                </div>
+                 <div class="mb-5 clock_item flex justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -448,7 +495,24 @@ export default {
                 </div>
               </div>
               <div class="basis-1/4">
-                <div class="clock_item flex justify-center">
+                <div class="clock_item flex justify-center mb-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="black"
+                    class="w-6 h-6 mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span class="font-bold">Depart: 17:20</span>
+                </div>
+                <div class="clock_item flex justify-center mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -466,6 +530,7 @@ export default {
                   <span class="font-bold">Depart: 17:20</span>
                 </div>
               </div>
+              
             </div>
 
             <!-- Map -->
@@ -512,7 +577,7 @@ export default {
   margin: 0 auto;
 }
 .user_profile{
-  align-items: center;
+  align-items: flex-start;
 }
 .swiper-wrapper {
   padding: 10px 0;
